@@ -1,18 +1,16 @@
-#class
-class BestCourse:  #class name
+class Fighter:
+  def __init__(self,name):
+    self.name = name
+    self.health = 100 #predefined parameters
+    self.damage = 10  #predefined parameters
 
-  website = 'http://www.sak.com'
+  def attack(self, other_guy):
+    other_guy.health = other_guy.health - self.damage
 
-  def __init__(self, name): #method #parameter/argument
-    self.name = name #attribute
+sak = Fighter("Sarthak")
+pak= Fighter("Prabhu")
+jak = Fighter("Jax")
 
-  
-#Object
-python_course = BestCourse("Learn Python")
-learn_command_line_course = BestCourse("Learn command line")
+pak.attack(sak)
 
-print(python_course.name)
-print(BestCourse.website)
-
-print(learn_command_line_course.name) # object_name.Method
-print(BestCourse.website) # Class_name.Method
+print(sak.health)
